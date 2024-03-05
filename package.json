@@ -10,6 +10,10 @@
     "Hello",
     "world"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Nijarshrestha/basic-npm-package"
+  },
   "author": "nijar shrestha",
   "license": "ISC"
 }
