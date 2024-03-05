@@ -1,5 +1,3 @@
-function helloWorld() {
-  return 'Hello World from NPM';
+export function helloWorld() {
+  return 'Hello World from NPM and use something';
 }
-
-module.exports = helloWorld
