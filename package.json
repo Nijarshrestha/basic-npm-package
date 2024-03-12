@@ -1,19 +1,26 @@
 {
-  "name": "basic-hello-world-package",
-  "version": "1.0.3",
-  "description": "This package is for learning purpose",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
-    "Hello",
-    "world"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Nijarshrestha/basic-npm-package"
-  },
-  "author": "nijar shrestha",
-  "license": "ISC"
+    "name": "basic-hello-world-package",
+    "version": "1.0.3",
+    "description": "This package is for learning purpose",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "lint": "eslint *.js",
+        "format": "prettier . --write"
+    },
+    "keywords": [
+        "Hello",
+        "world"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Nijarshrestha/basic-npm-package"
+    },
+    "author": "nijar shrestha",
+    "license": "ISC",
+    "devDependencies": {
+        "eslint": "^8.57.0",
+        "linting": "^1.0.0",
+        "prettier": "^3.2.5"
+    }
 }
