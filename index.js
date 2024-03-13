@@ -1,4 +1,5 @@
 export function helloWorld() {
+    console.info('here')
     return 'Hello World from NPM and use something'
 }
 

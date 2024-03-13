@@ -1,8 +1,0 @@
-{
-    "extends": ["eslint:recommended"],
-    "rules": {
-        "no-console": "error",
-        "eslint-plugin-import/export": "warn",
-        "eslint-plugin-import/group-exports": "off"
-    }
-}
