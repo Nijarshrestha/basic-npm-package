@@ -1,0 +1,21 @@
+name: Linting and formatting
+
+on: push
+
+jobs:
+    Check-linting:
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: actions/checkout@v1
+
+            - name: Setup Node.js
+              uses: actions/setup-node@v1
+              with:
+                  node-version: 20
+            - name: Install Required Packages
+              run: npm install prettier && npm install eslint
+            - name: Linting
+              run: npm run lint
+            - name: Prettier
+              run: npm run format
