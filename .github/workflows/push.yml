@@ -3,7 +3,7 @@ name: Linting and formatting
 on: push
 
 jobs:
-    Check-linting:
+    Run-required-checks:
         runs-on: ubuntu-latest
 
         steps:
