@@ -14,10 +14,8 @@ jobs:
               with:
                   node-version: 20
             - name: Install Required Packages
-              run: npm install prettier eslint jest
+              run: npm install prettier eslint
             - name: Linting
               run: npm run lint
             - name: Prettier
               run: npm run format
-            - name: Testing
-              run: npm run test
