@@ -1,6 +1,6 @@
 {
     "name": "basic-hello-world-package",
-    "version": "1.0.13",
+    "version": "1.0.14",
     "description": "This package is for learning purpose",
     "main": "index.js",
     "scripts": {
