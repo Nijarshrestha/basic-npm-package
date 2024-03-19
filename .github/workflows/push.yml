@@ -1,4 +1,4 @@
-name: Linting and formatting
+name: Linting, formatting & testing
 
 on: push
 
@@ -13,9 +13,13 @@ jobs:
               uses: actions/setup-node@v1
               with:
                   node-version: 20
-            - name: Install Required Packages
+            - name: Install Required packages for Prettier and Linting
               run: npm install prettier eslint
             - name: Linting
               run: npm run lint
             - name: Prettier
               run: npm run format
+            - name: Install Required packages for Testing
+              run: npm install jest
+            - name: Testing 123....
+              run: npm run test
