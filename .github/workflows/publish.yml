@@ -2,21 +2,26 @@ name: Publish to NPM
 on:
     release:
         types: [published]
-
 jobs:
-    release:
+    Publish:
         runs-on: ubuntu-latest
         steps:
             - name: Checkout
-              uses: actions/checkout@v2
-
-            - name: Set up Node.js
+              uses: actions/checkout@v1
+            - name: Setup Node
               uses: actions/setup-node@v1
               with:
-                  node-version: 18
-                  registry-url: https://registry.npmjs.org
-
-            - name: Create Release
-              run: npm publish --access public
-              env:
-                  NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+                  node-version: 20
+                  registry-url: 'https://registry.npmjs.org'
+            - name: Install Required Packages
+              run: npm install prettier eslint jest
+            - name: Linting, Format and testing..
+              run: |
+                  npm run lint
+                  npm run format
+                  npm run test
+            - name: Publish
+              run: |
+                  npm publish --access public
+                  env:
+                    NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
