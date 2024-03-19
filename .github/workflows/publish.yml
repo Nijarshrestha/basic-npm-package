@@ -15,7 +15,7 @@ jobs:
                   registry-url: 'https://registry.npmjs.org'
             - name: Install Required Packages
               run: npm install prettier eslint jest
-            - name: Linting, Format and testing
+            - name: Linting, Format and testing..
               run: |
                   npm run lint
                   npm run format
